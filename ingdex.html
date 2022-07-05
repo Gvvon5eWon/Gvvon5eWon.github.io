@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            text-align: center;
+            margin:30px 30px 30px 30px;
+            border: 3px solid black;
+            background-color: green;
+            padding-top:10px;
+            padding-bottom:50px;
+            color:white;
+        }
+        #border1 {
+            margin:10px 10px 10px 10px;
+            border:3px solid black;
+            background-color: burlywood;
+            width:1000px;
+            
+        }
+        #text {
+            font-size:5em;
+        }
+        #sorry {
+            text-align: left;
+            margin: 0px 0px 0px -700px;
+        }
+    </style>
+</head>
+<body>
+    <div id="border1">
+    <div id="container">
+        <h1 id="text">오늘 할 공부</h1><br>
+    <script>
+            const go = new Array('국어', '수학', '사회', '과학', '영어', '컴구', '프로그래밍');
+            document.write("<h1>"+randomItem(go)+"</h1>", ' ');
+            const si = new Array('0', '1', '1', '1', '2', '2', '3');
+            const boon = new Array('30', '30', '20', '10', '00');
+            document.write("<h1>"+randomItem(si)+"시간"+randomItem(boon)+"분</h1>", ' ');
+               
+            function randomItem(a){
+                return a[Math.floor(Math.random() * a.length)];}
+                function reset(){
+                    window.location.reload();
+                } 
+            
+    </script>
+    <br>
+    <hr>
+    <button id="sorry" type="button" onclick="reset()"></button>
+    </div>
+    </div>
+</body>
+</html>
